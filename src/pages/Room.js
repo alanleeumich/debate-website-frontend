@@ -13,7 +13,7 @@ function Message(props){
 
 const Room = () =>{
 
-    const api = "https://squabblegoblin.herokuapp.com"
+    const api = "https://squabblegoblin-backend.herokuapp.com"
     const { roomName } = useParams()
     const { side } = useParams()
     const [roomFull, setRoomFull] = useState(false)

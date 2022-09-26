@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () =>{
 
     const navigate = useNavigate();
-    const api = "https://squabblegoblin.herokuapp.com"
+    const api = "https://squabblegoblin-backend.herokuapp.com"
 
     let joinRoomAff = async() =>{
         let response = await fetch(api + '/api/join',{
