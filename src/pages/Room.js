@@ -34,7 +34,7 @@ const Room = () =>{
 
     useEffect(() => {
         chatSocket.current = new WebSocket(
-            'ws://'
+            'wss://'
             + api
             + '/ws/chat/'
             + roomName
