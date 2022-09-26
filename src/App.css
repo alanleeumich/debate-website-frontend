@@ -1,0 +1,177 @@
+.App {
+  text-align: center;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    overflow: auto;
+    height: 100%;
+}
+
+.App{
+  text-align: center;
+  background:  linear-gradient(135deg,#1a1616 10%,aliceblue 20% ,#1a1616 20%,aliceblue 40% ,#1a1616 10%,#1a1616 60%,#1a1616 20%,
+  aliceblue 80%,#1a1616 70%,#1a1616 80%,#1a1616 20%,aliceblue 90%, #1a1616 10%);
+
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+
+
+}
+
+.homePanel{
+  background: #1a1616;
+
+  position:absolute;
+  top: 40%;
+  transform: translate(0, -40%);
+
+  margin-right: 30%;
+  margin-left: 30%;
+  padding: 30px;
+  border-radius: 15px;
+
+  border:  solid 4px aliceblue;
+
+}
+
+.prompt{
+  font-family: 'Montserrat', sans-serif;
+  color:rgb(158, 158, 158);
+  text-transform: capitalize;
+  font-size: 30px;
+}
+.prompt h1{
+  margin-top: 5px;
+  color:rgb(230, 198, 255);
+  
+
+}
+
+.buttons {
+  margin-top: 50px;
+}
+.buttons button{
+  font-size: 25px;
+  min-width: 30%;
+  font-family: 'Montserrat', sans-serif;
+  text-transform:uppercase;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  background-color: #1a1616;
+  border: solid 2px;
+}
+
+#agree{
+  margin-right: 5%;
+  border-color: rgb(255, 73, 73);
+  color:rgb(255, 73, 73);
+  
+}
+
+#agree:hover{
+  background-color: rgb(255, 73, 73);
+  color:aliceblue
+  
+}
+
+#disagree{
+  margin-left: 5%;
+  border-color:dodgerblue;
+  color:dodgerblue;
+  
+}
+#disagree:hover{
+  background-color: dodgerblue;
+  color:aliceblue
+  
+}
+
+.waitingBack{
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  background-color: rgb(67, 67, 131);
+  opacity: 0.5;
+}
+
+.waitingPanel{
+  font-size: 45px;
+  color:aliceblue;
+  position: absolute;
+  top: 30%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  font-style: italic;
+  
+  
+  
+}
+
+
+.messagePanel{
+  position:absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-height: 100%;
+}
+
+.middle{
+  min-width: 400px;
+}
+
+.sideCover{
+  background-color: rgb(67, 67, 131);
+  opacity: 0.5;
+}
+.messageField{
+  height:70%;
+  width: 33%;
+  min-width: 400px;
+  overflow: scroll;
+  position: fixed;
+
+}
+.messageField ul{
+  list-style: none;
+}
+
+.message{
+  background-color: white;
+  font-size: 16px;
+  padding: 10px;
+  margin: 5px;
+  max-width: 200px;
+  min-width: 40px;
+  border-radius: 8px;
+}
+
+.typeField{
+  background-color: whitesmoke;
+  bottom: 0;
+  position: absolute;
+  width: 33.33%;
+  min-width: 400px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+}
+.typeField input{
+  width: 33.33%;
+  min-width: 390px;
+}
+
