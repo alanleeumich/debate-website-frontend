@@ -12,7 +12,7 @@ const CommunityHome = () =>{
 
     let getPrompt = async() =>{
         let response = await fetch(api + '/api/get-prompt',{
-          method: "PUT",
+          method: "POST",
           headers: {
             'Content-Type': 'application/json'
           },
