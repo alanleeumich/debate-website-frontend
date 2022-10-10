@@ -19,7 +19,7 @@ const CommunityHome = () =>{
         })
         let data = await response.json()
         console.log(data)
-        navigate("rooms/" + data + "/aff") 
+        navigate("/rooms/" + data + "/aff") 
     }
     let joinRoomNeg = async() =>{
         let response = await fetch(api + '/api/join',{
@@ -31,7 +31,7 @@ const CommunityHome = () =>{
         })
         let data = await response.json()
         console.log(data)
-        navigate("rooms/" + data + "/neg")
+        navigate("/rooms/" + data + "/neg")
         
     }
     
