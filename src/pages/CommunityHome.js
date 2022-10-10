@@ -1,8 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import { useParams } from 'react-router-dom'
 
-const Home = () =>{
+
+const CommunityHome = () =>{
 
     const navigate = useNavigate();
+    const { community } = useParams()
     const api = "https://squabblegoblin-backend.herokuapp.com"
 
     let joinRoomAff = async() =>{
@@ -11,7 +14,7 @@ const Home = () =>{
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({"side" : "aff"})
+          body: JSON.stringify({"side" : "aff","community" : community})
           
         })
         let data = await response.json()
@@ -24,7 +27,7 @@ const Home = () =>{
             headers: {
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify({"side" : "neg"})
+            body: JSON.stringify({"side" : "neg", "community" : community})
         })
         let data = await response.json()
         console.log(data)
@@ -52,4 +55,4 @@ const Home = () =>{
     );
 }
 
-export default Home;
+export default CommunityHome;
