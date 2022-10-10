@@ -16,6 +16,7 @@ const Room = () =>{
     const api = "squabblegoblin-backend.herokuapp.com"
     const { roomName } = useParams()
     const { side } = useParams()
+    const { community } = useParams()
     const [roomFull, setRoomFull] = useState(false)
 
     const chatSocket = useRef(null);
@@ -64,7 +65,7 @@ const Room = () =>{
         }
         chatSocket.current.onclose = function(e) {
             console.log('Chat socket closed unexpectedly')
-            navigate("/")
+            navigate("/communities/"  + community)
         }
     }, []);
 

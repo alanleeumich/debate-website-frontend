@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 
 const CreateUser = () =>{
    
     const api = "https://squabblegoblin-backend.herokuapp.com"
-
+    const navigate = useNavigate();
     let sendUser = async() =>{
         let username = document.getElementById("username").value
         let email = document.getElementById("email").value
@@ -18,6 +20,12 @@ const CreateUser = () =>{
           })
         let data = await response.json()
         console.log(data)
+        if (data == "user already exists"){
+            window.alert("Username already taken")
+        }
+        else{
+            navigate("/user/" + username)
+        }
     }
    
     return(

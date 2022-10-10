@@ -14,7 +14,7 @@ function App() {
   return(
     <BrowserRouter>
       <Routes>
-        <Route path = "/rooms/:roomName/:side" element = {<Room />}/>
+        <Route path = "/rooms/:community/:roomName/:side" element = {<Room />}/>
         <Route path="/communities/:community" element={<CommunityHome />}/>
         <Route path = "/login" element = {<Login/>}/>
         <Route path = "/create-user" element = {<CreateUser/>}/>
