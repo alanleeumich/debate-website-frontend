@@ -24,6 +24,8 @@ const CreateUser = () =>{
             window.alert("Username already taken")
         }
         else{
+            UserProfile.setUsername(username)
+            UserProfile.setPassword(password)
             navigate("/user/" + username)
         }
     }
