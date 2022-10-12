@@ -152,7 +152,7 @@ const User = () =>{
             <button onClick={() => 
                     window.open("/communities/" + props.name , '_blank', 'noopener,noreferrer')}>          
             GO TO COMMUNITY</button> <br/>
-            Share: {window.location.href + "/communities/" + props.name}
+            Share: {"https://" + window.location.hostname + "/communities/" + props.name}
 
 
 
