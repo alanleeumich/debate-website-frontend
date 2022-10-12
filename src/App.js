@@ -6,6 +6,7 @@ import CommunityHome from "./pages/CommunityHome";
 import Room from "./pages/Room";
 import Login from "./pages/Login";
 import User from "./pages/User";
+import Home from "./pages/Home";
 import CreateUser from "./pages/CreateUser";
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path = "/login" element = {<Login/>}/>
         <Route path = "/create-user" element = {<CreateUser/>}/>
         <Route path = "/user/:username" element = {<User/>}/>
+        <Route exact path = "/" element = {<Home/>}/>
       </Routes>
     </BrowserRouter>
   )

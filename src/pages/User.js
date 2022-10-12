@@ -2,12 +2,16 @@ import { useParams } from 'react-router-dom'
 import UserProfile from '../components/UserProfile';
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 const User = () =>{
    
     const api = "https://squabblegoblin-backend.herokuapp.com"
     const {username} = useParams()
     const [data, setData] = useState(null);
     const [communityNames, setCommunityNames] = useState([])
+    const navigate = useNavigate();
+
     let getUser = async() =>{
        
 
@@ -108,8 +112,14 @@ const User = () =>{
           
         })
       let data = await response.json()
+      if (data == "error, community name already taken"){
+        window.alert("Community already exists, use a different name")
+      }
+      else{
+        getUser()
+      }
       console.log(data)
-      getUser()
+      
   }
 
     
@@ -139,10 +149,16 @@ const User = () =>{
         return (
             <>
             <h2>{ props.name }</h2>
+            <button onClick={() => 
+                    window.open("/communities/" + props.name , '_blank', 'noopener,noreferrer')}>          
+            GO TO COMMUNITY</button>
+            <br/>
+            <h3>Prompts</h3>
             <ul>
               {data[props.name].map((prompt) => <Prompt content={prompt["content"]} id = {prompt["id"]} promptCommunity = {props.name}/>)}
             </ul>
-            Create new prompt:<input id = {props.name + "-INPUT"}></input>
+            <br/>
+            Add Prompt:<input id = {props.name + "-INPUT"}></input>
             <button onClick = {()=> {addPrompt(props.name,document.getElementById(props.name + "-INPUT").value);
                                     document.getElementById(props.name + "-INPUT").value = "";
                                     

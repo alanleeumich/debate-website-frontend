@@ -29,6 +29,9 @@ const Login = () =>{
             navigate("/user/" + username)
 
         }
+        else{
+            window.alert("Login Credentials Invalid")
+        }
     }
    
     return(
@@ -39,6 +42,9 @@ const Login = () =>{
             password:
             <input id = "password"  autocomplete="off"></input>
             <button onClick = {sendUser}>SUBMIT</button>
+
+            <br/><br/>
+            <button onClick = {()=> navigate("/create-user")}>Create New User</button>
         </div>
 
 
